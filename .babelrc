@@ -1,0 +1,30 @@
+{
+  "presets": [
+    "@babel/preset-react",
+    "@babel/preset-flow",
+    [
+      "@babel/preset-env",
+      {
+        "useBuiltIns": "usage",
+        "corejs": "3.11",
+        "targets": {
+          "browsers": ["last 2 versions", "IE >= 9"]
+        }
+      }
+    ]
+  ],
+
+  "env": {
+    "test": {
+      "sourceMap": "inline"
+    }
+  },
+
+  "plugins": [
+    "lodash",
+    "@babel/plugin-transform-async-to-generator",
+    "@babel/plugin-proposal-object-rest-spread",
+    "transform-imports",
+    "@babel/plugin-transform-runtime"
+  ]
+}
